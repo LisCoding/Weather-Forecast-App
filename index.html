@@ -11,7 +11,7 @@
         var location = $("input").val();
         var url = "http://api.openweathermap.org/data/2.5/weather?q=";
         var location = $("input").val();
-        var key = "&units=imperial:fahrenheit&&appid=55f7cd0c033621ee4e1884976ce9d9ab";
+        var key = "&&appid=55f7cd0c033621ee4e1884976ce9d9ab";
         url = url + location + key;
         $.get(url,function (data) {
           var temp = data.main.temp;
