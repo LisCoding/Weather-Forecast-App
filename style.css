@@ -1,0 +1,18 @@
+h1 {
+  color: purple;
+}
+input {
+  padding: 10px 80px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+button {
+    padding: 8px 30px;
+    background-color: lightgreen;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.info h1 {
+  font-size: 60px;s
+}

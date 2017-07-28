@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weather Forescat App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      $('form').submit(function () {
+        var location = $("input").val();
+        var url = "http://api.openweathermap.org/data/2.5/weather?q=";
+        var location = $("input").val();
+        var key = "&units=imperial:fahrenheit&&appid=55f7cd0c033621ee4e1884976ce9d9ab";
+        url = url + location + key;
+        $.get(url,function (data) {
+          var temp = data.main.temp;
+          temp = Math.round((9/5) * (temp - 273) + 32);
+          var nameLocation = data.name;
+          $('.info').html("<h1>"+nameLocation+"<h1><h2>Temperature: "+temp+"</h2>");
+        }, "json")
+
+        return false;
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <h1>Welcome!</h1>
+    <form class="" action="index.html" method="post">
+      <input type="text" name="" value="">
+      <button type="submmit" name="button">Search weather</button>
+    </form>
+    <div class="info">
+    </div>
+  </body>
+</html>
